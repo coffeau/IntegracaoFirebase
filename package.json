@@ -1,0 +1,13 @@
+{
+  "name": "firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --watch css/style.scss css/style.css",
+    "sass-min": "node-sass --watch css/style.scss css/style.min.css"
+  },
+  "keywords": [],
+  "author": "Eduarda Saibertnpm install bootstrap",
+  "license": "ISC"
+}

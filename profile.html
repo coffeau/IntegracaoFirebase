@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Perfil | Meus Livros</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <link 
+    href="./css/style.css" 
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-light">
+    <div id="page" class="d-flex">
+        <div id="sidebar" class="bg-dark border-right">
+            <header>Meus Livros</header>
+            <nav class="list-group list-group-flush">
+                <a href="index.html" class='list-group-item list-group-item-action bg-dark'>
+                    Dashboard
+                </a>
+                <a href=profile.html class='list-group-item list-group-item-action bg-dark'>
+                    Perfil
+                </a>
+                <a href=# onclick="logout()" class='list-group-item list-group-item-action bg-dark'>
+                    Sair
+                </a>
+            </nav>
+        </div>
+        <div id="page-content">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+                <button id='sidebar-toggle' class='btn btn-primary ms-3'>Menu</button>
+
+                <button 
+                class='navbar-toggler' 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a 
+                            id="navbarDropdown" 
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-haspopup="true" 
+                            aria-expanded="false" 
+                            >Meu usuário</a>
+
+                            <div 
+                            class="dropdown-menu dropdown-menu-right"
+                            aria-labelledby="navbarDropdown">
+                                <a href="profile.html" class="dropdown-item ">Perfil</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" onclick="logout()" class="dropdown-item">Sair</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <div class="card mt-3">
+                    <div class="card-body bg-dark">
+                        <h1 class="card-title mt-4">Meu Perfil</h1>
+                        <h5 id=userInfo class='card-subtitle mb-5'>Perfil</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="inputFirstName">Nome</label>
+                                <input id="inputFirstName" type="text" name="" class="form-control bg-light text-secondary">
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="inputLastName">Sobrenome</label>
+                                <input id="inputLastName" type="text" name="" class="form-control bg-light text-secondary">
+                            </div>
+                            <button type="button" class="btn btn-primary mt-3" onclick="saveProfile()" >Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    Autenticado
+
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+    crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script defer src='https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js'></script>
+
+    <script src="./javascript/init.js"></script>
+    <script src="./javascript/profile.js"></script>
+    <script src="./javascript/auth.js"></script>
+    
+    <script>
+        $('#sidebar-toggle').click(function (e) {
+            e.preventDefault()
+            $('#page').toggleClass('toggled')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.list-gp{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#sidebar, .list-group-item, .container-fluid, button{
+    color: #adb5bd;
+}
+
+#newItem, #livro, #autor, #data{
+    color: #adb5bd;
+}
+
+.list-group-item{
+    background-color: #222a31;
+}
+
+#page{
+    overflow-x: hidden;
+}
+
+#page.toggled #sidebar{
+    margin-left: -15rem;
+}
+
+#sidebar{
+    min-height: 100vh;
+    margin-left:0;
+    width: 15rem;
+    -webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+    -transition: margin 0.25s ease-out;
+}
+
+#sidebar header{
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#page-content{
+    min-width: 0;
+    width: 100%;
+
+}
+
+#logo img{
+    width: 60%;
+}
+
